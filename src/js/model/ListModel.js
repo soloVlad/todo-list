@@ -9,7 +9,7 @@ class ListModel {
   add(task) {
     const taskId = `${this.listName}-${FullList.getAvailableId(this.listName)}`;
     const taskWithId = {
-      taskId,
+      id: taskId,
       ...task,
     };
     this.list.push(taskWithId);

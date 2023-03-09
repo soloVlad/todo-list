@@ -1,5 +1,13 @@
 const FullList = {
-  list: [],
+  list: {
+    first: [
+      {
+        id: 1,
+        text: 'first task',
+        dueDate: '10:30',
+      },
+    ],
+  },
 
   add(task) {
     const { listName } = task;

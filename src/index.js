@@ -1,11 +1,7 @@
-function component() {
-  const element = document.createElement('div');
+import ListModel from './js/model/ListModel';
+import ListController from './js/controller/ListController';
+import ListView from './js/view/ListView';
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = 'Hi, webpack';
-  element.classList.add('hello');
-
-  return element;
-}
-
-document.body.appendChild(component());
+const listModel = new ListModel('first');
+const listController = new ListController(listModel);
+const listView = new ListView(listController, document.body);
