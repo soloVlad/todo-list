@@ -175,7 +175,7 @@ dfn {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 0 0;
 }
 
 @if $legacy_browser_support {
@@ -623,4 +623,6 @@ ul {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
