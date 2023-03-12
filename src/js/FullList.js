@@ -6,6 +6,11 @@ const FullList = {
         text: 'first task',
         dueDate: '10:30',
       },
+      {
+        id: 2,
+        text: 'first task',
+        dueDate: '10:30',
+      },
     ],
   },
 

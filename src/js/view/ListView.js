@@ -23,7 +23,7 @@ class ListView {
       todoState.classList.add('todo__state');
       todoDueDate.classList.add('todo__due-date');
 
-      checkButton.type = 'radio';
+      checkButton.type = 'checkbox';
       todoText.textContent = task.text;
       todoDueDate.textContent = task.dueDate ?? '';
 

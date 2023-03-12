@@ -1,0 +1,78 @@
+.title {
+  @include font(3.2rem, 3.2rem, 700);
+  text-transform: capitalize;
+}
+
+.todo {
+  padding: 0.8rem;
+  display: flex;
+  gap: 0.8rem;
+  text-transform: capitalize;
+  border-bottom: 0.1rem solid #f0f0f0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.todo__check-button {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: black;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 0.2rem solid red;
+  border-radius: 50%;
+
+  // align :before to the center
+  display: grid;
+  place-content: center;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 0.8rem;
+    height: 0.2rem;
+    transform: scale(0);
+    @extend %transition;
+    box-shadow: inset 1rem 1rem red;
+  }
+
+  &::after {
+    width: 0.6rem;
+  }
+
+  &:checked::before,
+  &:hover::before {
+    transform: scale(1) translate(0.2rem, 0.1rem) rotate(-50deg);
+  }
+
+  &:checked::after,
+  &:hover::after {
+    transform: scale(1) translate(-0.1rem) rotate(45deg);
+  }
+
+  &:hover {
+    cursor: inherit;
+  }
+}
+
+.todo:has(.todo__check-button:checked) .todo__text {
+  text-decoration: line-through;
+}
+
+.todo__text {
+  @include font(1.6rem, 1.6rem, 600);
+}
+
+.todo__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.todo__state {
+  @include font(1.4rem, 1.4rem, 400);
+}
