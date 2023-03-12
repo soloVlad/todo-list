@@ -2,6 +2,9 @@ class ListView {
   constructor(controller, parent) {
     this.controller = controller;
 
+    this.listContainer = document.createElement('div');
+    this.listContainer.classList.add('list-container');
+
     this.title = document.createElement('h1');
     this.title.classList.add('title');
     this.title.textContent = this.controller.modelListName;
@@ -35,8 +38,9 @@ class ListView {
       this.list.appendChild(listItem);
     });
 
-    parent.appendChild(this.title);
-    parent.appendChild(this.list);
+    this.listContainer.appendChild(this.title);
+    this.listContainer.appendChild(this.list);
+    parent.appendChild(this.listContainer);
   }
 }
 

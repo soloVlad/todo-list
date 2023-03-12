@@ -3,6 +3,11 @@
   text-transform: capitalize;
 }
 
+.list-container {
+  margin: 0 auto;
+  max-width: 98rem;
+}
+
 .todo {
   padding: 0.8rem;
   display: flex;
