@@ -8,7 +8,31 @@ const FullList = {
       },
       {
         id: 2,
+        text: 'second task',
+        dueDate: '10:30',
+      },
+    ],
+    second: [
+      {
+        id: 1,
         text: 'first task',
+        dueDate: '10:30',
+      },
+      {
+        id: 2,
+        text: 'second task',
+        dueDate: '10:30',
+      },
+    ],
+    third: [
+      {
+        id: 1,
+        text: 'first task',
+        dueDate: '10:30',
+      },
+      {
+        id: 2,
+        text: 'second task',
         dueDate: '10:30',
       },
     ],
@@ -31,6 +55,10 @@ const FullList = {
 
   getAvailableId(listName) {
     return this.list[listName][this.list[listName].length - 1] + 1;
+  },
+
+  getListNames() {
+    return Object.keys(this.list);
   },
 };
 

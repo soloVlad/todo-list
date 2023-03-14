@@ -4,3 +4,9 @@
   font-weight: $weight;
   font-style: $style;
 }
+
+@mixin column($gap: 0) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}

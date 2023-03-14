@@ -5,8 +5,13 @@ html {
 }
 
 body {
+  min-height: 100vh;
   font-family: 'Exo 2', sans-serif;
   @include font(1.6rem);
+  @include column();
+}
+
+main {
   display: flex;
-  flex-direction: column;
+  flex: 1;
 }
