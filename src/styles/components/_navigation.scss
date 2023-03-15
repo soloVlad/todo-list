@@ -12,8 +12,9 @@
 }
 
 .navigation__lists {
+  $lists-gap: 1.8rem;
   position: relative;
-  @include column(1.8rem);
+  @include column($lists-gap);
 
   &::before {
     content: attr(aria-label);
@@ -26,7 +27,7 @@
     position: absolute;
     bottom: 0;
     width: 0.2rem;
-    height: calc(100% - 3rem);
+    height: calc(100% - #{$lists-gap} - 1.2rem);
     background-color: rgba(28, 29, 34, 0.1);
   }
 }
