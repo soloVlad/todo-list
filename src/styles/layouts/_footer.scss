@@ -1,13 +1,15 @@
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #333;
 }
 
 .footer__link {
   padding: 1.2rem;
   display: flex;
-  gap: 0.8rem;
   align-items: center;
-  justify-content: center;
+  gap: 0.8rem;
   @include font(1.6rem, 1.6rem, 600);
   color: #eee;
   text-decoration: none;
