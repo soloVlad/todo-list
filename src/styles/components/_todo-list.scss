@@ -4,8 +4,9 @@
 }
 
 .list-container {
-  flex: 1;
   margin: 0 auto;
+  @extend %tb-padding-default;
+  flex: 1;
   max-width: 98rem;
 }
 

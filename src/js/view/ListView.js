@@ -5,7 +5,7 @@ class ListView {
     this.listContainer = document.createElement('div');
     this.listContainer.classList.add('list-container');
 
-    this.title = document.createElement('h1');
+    this.title = document.createElement('h2');
     this.title.classList.add('title');
     this.title.textContent = this.controller.modelListName;
 

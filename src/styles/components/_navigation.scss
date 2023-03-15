@@ -1,6 +1,7 @@
 .navigation {
   @include column(1.8rem);
-  padding: 3.2rem 4.8rem;
+  @extend %lr-padding-default;
+  @extend %tb-padding-default;
   max-width: 32rem;
   text-transform: capitalize;
   @include font(1.8rem, 1.8rem, 600);

@@ -1,4 +1,5 @@
-import Footer from './js/view/FooterView';
+import HeaderView from './js/view/HeaderView';
+import FooterView from './js/view/FooterView';
 
 import NavigationModel from './js/model/NavigationModel';
 import NavigationController from './js/controller/NavigationController';
@@ -19,5 +20,6 @@ const listModel = new ListModel('first');
 const listController = new ListController(listModel);
 const listView = new ListView(listController, main);
 
+const headerView = new HeaderView(document.body);
 document.body.appendChild(main);
-const footerView = new Footer(document.body);
+const footerView = new FooterView(document.body);

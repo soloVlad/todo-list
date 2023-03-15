@@ -1,6 +1,6 @@
 import gitHubIcon from '../../img/github.svg';
 
-class Footer {
+class FooterView {
   constructor(parent) {
     this.footer = document.createElement('footer');
     this.footerLink = document.createElement('a');
@@ -23,4 +23,4 @@ class Footer {
   }
 }
 
-export default Footer;
+export default FooterView;
