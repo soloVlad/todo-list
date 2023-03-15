@@ -4,7 +4,7 @@
   @extend %tb-padding-default;
   max-width: 32rem;
   text-transform: capitalize;
-  @include font(1.8rem, 1.8rem, 600);
+  @include font(2rem, 2rem, 600);
 }
 
 .navigation__link {
@@ -13,7 +13,7 @@
 }
 
 .navigation__lists {
-  $lists-gap: 1.8rem;
+  $lists-gap: 2rem;
   position: relative;
   @include column($lists-gap);
 
