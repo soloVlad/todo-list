@@ -5,9 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #333;
+  background-color: $color-primary;
   @include font(2.4rem, 2.4rem, 700);
-  color: white;
+  color: $color-white;
 }
 
 .logo {

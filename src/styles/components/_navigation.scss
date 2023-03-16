@@ -5,6 +5,7 @@
   max-width: 32rem;
   text-transform: capitalize;
   @include font(2rem, 2rem, 600);
+  color: $color-text-dark;
 }
 
 .navigation__link {
@@ -29,14 +30,14 @@
     bottom: 0;
     width: 0.2rem;
     height: calc(100% - #{$lists-gap} - 1.2rem);
-    background-color: rgba(28, 29, 34, 0.1);
+    background-color: $color-grey-10;
   }
 }
 
 .navigation__sublink {
   position: relative;
   padding-left: 2.8rem;
-  color: rgba(28, 29, 34, 0.5);
+  color: $color-grey-50;
   text-decoration: none;
 
   &::before {
@@ -48,6 +49,6 @@
     margin: auto;
     height: 0.2rem;
     width: 1.6rem;
-    background-color: rgba(28, 29, 34, 0.1);
+    background-color: $color-grey-10;
   }
 }

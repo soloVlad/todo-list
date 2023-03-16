@@ -1,17 +1,20 @@
 .title {
-  @include font(3.2rem, 3.2rem, 700);
+  @include font(3.4rem, 3.4rem, 700);
   text-transform: capitalize;
 }
 
 .list-container {
   margin: 0 auto;
   @extend %tb-padding-default;
+  @extend %lr-padding-default;
   flex: 1;
-  max-width: 98rem;
+  max-width: 100rem;
+  color: $color-text-dark;
 }
 
 .todo-list {
   margin-top: 3.2rem;
+  @include column(0.8rem);
 }
 
 .todo {
@@ -19,7 +22,7 @@
   display: flex;
   gap: 0.8rem;
   text-transform: capitalize;
-  border-bottom: 0.1rem solid #f0f0f0;
+  border-bottom: 0.1rem solid $color-grey-10;
 
   &:hover {
     cursor: pointer;
@@ -31,10 +34,9 @@
   background-color: #fff;
   margin: 0;
   font: inherit;
-  color: black;
   width: 2.2rem;
   height: 2.2rem;
-  border: 0.2rem solid red;
+  border: 0.2rem solid $color-check-button;
   border-radius: 50%;
 
   // align :before to the center
@@ -48,7 +50,7 @@
     height: 0.2rem;
     transform: scale(0);
     @extend %transition;
-    box-shadow: inset 1rem 1rem red;
+    box-shadow: inset 1rem 1rem $color-check-button;
   }
 
   &::after {
@@ -75,7 +77,7 @@
 }
 
 .todo__text {
-  @include font(1.6rem, 1.6rem, 600);
+  @include font(1.8rem, 1.8rem, 600);
 }
 
 .todo__content {
@@ -86,4 +88,9 @@
 
 .todo__state {
   @include font(1.4rem, 1.4rem, 400);
+}
+
+.todo__due-date {
+  font-weight: 600;
+  color: $color-dut-date;
 }
