@@ -50,7 +50,7 @@
     height: 0.2rem;
     transform: scale(0);
     @extend %transition;
-    box-shadow: inset 1rem 1rem $color-primary;
+    background-color: $color-primary;
   }
 
   &::after {
@@ -64,7 +64,7 @@
 
   &:checked::after,
   &:hover::after {
-    transform: scale(1) translate(-0.1rem) rotate(45deg);
+    transform: scale(1) translate(-0.08rem, 0.04rem) rotate(45deg);
   }
 
   &:hover {
