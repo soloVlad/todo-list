@@ -30,7 +30,6 @@ class NavigationView {
     a.classList.add('navigation__sublink');
 
     a.href = '#';
-    console.log(listName);
     a.textContent = listName;
 
     li.appendChild(a);
