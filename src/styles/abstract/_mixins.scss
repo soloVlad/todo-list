@@ -10,3 +10,7 @@
   flex-direction: column;
   gap: $gap;
 }
+
+@mixin transition($duration: 0.3s) {
+  transition: $duration ease-out all;
+}
