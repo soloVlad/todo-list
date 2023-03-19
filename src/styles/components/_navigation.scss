@@ -1,5 +1,5 @@
 .navigation {
-  @include column(1.8rem);
+  @include column();
   @extend %lr-padding-default;
   @extend %tb-padding-default;
   max-width: 32rem;
@@ -8,9 +8,18 @@
   color: $color-text-dark;
 }
 
+.navigation>* {
+  padding: 1rem 1.8rem;
+}
+
 .navigation__link {
+  border-radius: 1.8rem;
   display: block;
   font-weight: 700;
+
+  &:hover {
+    background-color: $color-light-shadow;
+  }
 }
 
 .navigation__lists {
@@ -21,7 +30,6 @@
   &::before {
     content: attr(aria-label);
     font-weight: 700;
-    cursor: pointer;
   }
 
   &::after {
@@ -29,7 +37,7 @@
     position: absolute;
     bottom: 0;
     width: 0.2rem;
-    height: calc(100% - #{$lists-gap} - 1.2rem);
+    height: calc(100% - #{$lists-gap} - 2.4rem);
     background-color: $color-grey-10;
   }
 }
@@ -39,6 +47,7 @@
   padding-left: 2.8rem;
   color: $color-grey-50;
   text-decoration: none;
+  @include transition(0.2s);
 
   &::before {
     content: "";
@@ -50,5 +59,14 @@
     height: 0.2rem;
     width: 1.6rem;
     background-color: $color-grey-10;
+    transition: inherit;
+  }
+
+  &:hover {
+    color: $color-text-dark;
+
+    &::before {
+      background-color: $color-primary;
+    }
   }
 }
