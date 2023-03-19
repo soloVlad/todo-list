@@ -15,7 +15,35 @@
 }
 
 .header__button {
+  position: relative;
   background: transparent;
   border: none;
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
   @include font(4.4rem, 4.4rem, 700);
+  @include transition(0.2s);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $color-white;
+    width: 2.6rem;
+    height: 0.4rem;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  &:hover {
+    background-color: $color-text-dark;
+    transform: rotate(90deg);
+  }
 }

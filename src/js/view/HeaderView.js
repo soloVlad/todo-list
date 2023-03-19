@@ -14,8 +14,6 @@ class HeaderView {
 
     this.logoText.textContent = 'Tasker';
     // TODO: find logo icon and import
-    // TODO: remove text and add icon
-    this.headerButton.textContent = '+';
 
     this.header.appendChild(this.logoContainer);
     this.header.appendChild(this.headerButton);
