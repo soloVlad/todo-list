@@ -12,11 +12,15 @@ class NavigationController {
     e.stopPropagation();
     switch (e.type) {
       case 'click':
-        console.log(this.modelListName);
+        this.clickHandler(e.target);
         break;
       default:
         console.log(e.target);
     }
+  }
+
+  clickHandler(target) {
+    const listName = target.getAttribute('data-list-name');
   }
 }
 

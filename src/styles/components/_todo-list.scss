@@ -23,6 +23,7 @@
   gap: 0.8rem;
   text-transform: capitalize;
   border-bottom: 0.1rem solid $color-grey-10;
+  @include transition(0.6s);
 
   &:hover {
     cursor: pointer;
@@ -70,6 +71,10 @@
   &:hover {
     cursor: inherit;
   }
+}
+
+.todo:has(.todo__check-button:checked) {
+  order: 1;
 }
 
 .todo:has(.todo__check-button:checked) .todo__text {

@@ -15,6 +15,7 @@ class NavigationView {
 
     this.navigationAll.textContent = 'all';
     this.navigationToday.textContent = 'today';
+
     this.navigationLists.setAttribute('aria-label', 'Lists');
 
     this.navigation.appendChild(this.navigationAll);
