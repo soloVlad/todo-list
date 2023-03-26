@@ -1,3 +1,5 @@
+import Events from '../Events';
+
 class NavigationView {
   constructor(controller, parent) {
     this.controller = controller;
@@ -22,6 +24,8 @@ class NavigationView {
     this.navigation.appendChild(this.navigationToday);
     this.navigation.appendChild(this.navigationLists);
     parent.appendChild(this.navigation);
+
+    Events.on('list added', this.render.bind(this));
   }
 
   createListLink(listName) {
@@ -36,6 +40,15 @@ class NavigationView {
     li.appendChild(a);
 
     this.navigationLists.appendChild(li);
+  }
+
+  clearNavigationLists() {
+    this.navigationLists.innerHTML = '';
+  }
+
+  render() {
+    this.clearNavigationLists();
+    this.controller.modelListNames.forEach((listName) => this.createListLink(listName));
   }
 }
 

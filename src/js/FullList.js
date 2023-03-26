@@ -1,3 +1,5 @@
+import Events from './Events';
+
 const FullList = {
   list: {
     first: [
@@ -40,13 +42,18 @@ const FullList = {
 
   add(task) {
     const { listName } = task;
-    this.list[listName] = this.list[listName] ?? [];
+    this.addList(listName);
     this.list[listName].push(task);
   },
 
   remove(id) {
     const listName = id.split('-')[0];
     this.list[listName] = this.list[listName].filter((task) => task.id !== id);
+  },
+
+  addList(listName) {
+    Events.emit('list added');
+    this.list[listName] = this.list[listName] ?? [];
   },
 
   getByListName(listName) {

@@ -1,5 +1,7 @@
 class HeaderView {
-  constructor(parent) {
+  constructor(controller, parent) {
+    this.controller = controller;
+
     this.header = document.createElement('header');
     this.logoContainer = document.createElement('div');
     this.logoIcon = document.createElement('img');
@@ -20,6 +22,8 @@ class HeaderView {
     this.logoContainer.appendChild(this.logoIcon);
     this.logoContainer.appendChild(this.logoText);
     parent.appendChild(this.header);
+
+    this.headerButton.addEventListener('click', this.controller);
   }
 }
 
