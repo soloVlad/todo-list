@@ -1,0 +1,26 @@
+.modal {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $color-grey-50;
+
+  &_hidden {
+    display: none;
+  }
+}
+
+.modal__content {
+  margin-top: 20vh;
+  max-height: 40vh;
+  height: 40vh;
+  min-height: 20rem;
+  @extend %lr-padding-default;
+  @extend %tb-padding-default;
+  background-color: $color-white;
+  border: 0.5rem solid $color-primary;
+  border-radius: 1.5rem;
+  @include column();
+}

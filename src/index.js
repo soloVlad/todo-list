@@ -2,6 +2,9 @@ import HeaderView from './js/view/HeaderView';
 import HeaderController from './js/controller/HeaderController';
 import FooterView from './js/view/FooterView';
 
+import ModalController from './js/controller/ModalController';
+import ModalView from './js/view/ModalView';
+
 import NavigationModel from './js/model/NavigationModel';
 import NavigationController from './js/controller/NavigationController';
 import NavigationView from './js/view/NavigationView';
@@ -21,7 +24,10 @@ const listModel = new ListModel('first');
 const listController = new ListController(listModel);
 const listView = new ListView(listController, main);
 
-const headerController = new HeaderController();
+const modalController = new ModalController();
+const modalView = new ModalView(modalController, document.body);
+
+const headerController = new HeaderController(modalView);
 const headerView = new HeaderView(headerController, document.body);
 document.body.appendChild(main);
 const footerView = new FooterView(document.body);

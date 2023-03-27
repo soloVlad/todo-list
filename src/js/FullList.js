@@ -52,8 +52,8 @@ const FullList = {
   },
 
   addList(listName) {
-    Events.emit('list added');
     this.list[listName] = this.list[listName] ?? [];
+    Events.emit('list added');
   },
 
   getByListName(listName) {

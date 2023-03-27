@@ -1,10 +1,14 @@
 class HeaderController {
+  constructor(modalView) {
+    this.modalView = modalView;
+  }
+
   // EventListener interface
   handleEvent(e) {
     e.stopPropagation();
     switch (e.type) {
       case 'click':
-        console.log(e.target);
+        this.modalView.toggleAppear();
         break;
       default:
         console.log(e.target);
