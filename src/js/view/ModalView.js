@@ -21,7 +21,7 @@ class ModalView {
     this.modalLabel.setAttribute('for', 'list-name-input');
     this.modalInput.type = 'text';
     this.modalInput.id = 'list-name-input';
-    this.modalButton.textContent = 'Add';
+    this.modalButton.textContent = 'Create';
 
     this.modalContent.appendChild(this.modalLabel);
     this.modalContent.appendChild(this.modalInput);
@@ -36,6 +36,9 @@ class ModalView {
   toggleAppear() {
     this.modal.classList.toggle('modal_hidden');
     this.clearInput();
+    if (!this.modal.classList.contains('modal_hidden')) {
+      this.modalInput.focus();
+    }
   }
 
   clearInput() {

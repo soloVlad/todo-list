@@ -14,9 +14,8 @@
 
 .modal__content {
   margin-top: 20vh;
-  max-height: 40vh;
-  height: 40vh;
-  min-height: 20rem;
+  height: 20vh;
+  min-height: 15rem;
   @extend %lr-padding-default;
   @extend %tb-padding-default;
   background-color: $color-white;
@@ -24,4 +23,37 @@
   border-radius: 1.5rem;
   @include column();
   justify-content: center;
+}
+
+.modal__label {
+  @include font(1.8rem, 1.8rem, 600);
+  color: $color-primary;
+}
+
+.modal__input {
+  margin-top: 0.6rem;
+  padding: 0.5rem;
+  border: 0.2rem solid $color-primary;
+  border-radius: 1rem;
+  @include font(1.6rem, 1.6rem, 500);
+
+  &:active,
+  &:focus {
+    background-color: $color-additional;
+  }
+}
+
+.modal__button {
+  margin-top: 2rem;
+  padding: 1.2rem 1rem;
+  background-color: $color-primary;
+  border: none;
+  border-radius: 1.5rem;
+  @include font(2rem, 2rem, 600);
+  color: $color-white;
+  @include transition();
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
