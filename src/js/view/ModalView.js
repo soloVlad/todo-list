@@ -29,7 +29,7 @@ class ModalView {
     this.modal.appendChild(this.modalContent);
     parent.appendChild(this.modal);
 
-    this.modalButton.addEventListener('click', this.controller);
+    this.modal.addEventListener('click', this.controller);
     Events.on('close modal', this.toggleAppear.bind(this));
   }
 

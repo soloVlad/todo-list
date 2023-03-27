@@ -23,4 +23,5 @@
   border: 0.5rem solid $color-primary;
   border-radius: 1.5rem;
   @include column();
+  justify-content: center;
 }

@@ -15,7 +15,9 @@ class ModalController {
   }
 
   handleClick(target) {
-    if (target.classList.contains('modal__button')) {
+    if (target.classList.contains('modal')) {
+      Events.emit('close modal');
+    } else if (target.classList.contains('modal__button')) {
       const listName = target.parentElement.querySelector('#list-name-input').value;
       FullList.addList(listName);
       Events.emit('close modal');
