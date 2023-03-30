@@ -1,3 +1,5 @@
+import { handleLocation } from './js/Router';
+
 import HeaderView from './js/view/HeaderView';
 import HeaderController from './js/controller/HeaderController';
 import FooterView from './js/view/FooterView';
@@ -31,3 +33,7 @@ const headerController = new HeaderController(modalView);
 const headerView = new HeaderView(headerController, document.body);
 document.body.appendChild(main);
 const footerView = new FooterView(document.body);
+
+window.onpopstate = handleLocation;
+
+handleLocation();

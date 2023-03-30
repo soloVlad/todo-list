@@ -1,10 +1,11 @@
+import { Route } from '../Router';
+
 class NavigationController {
   constructor(model) {
     this.model = model;
   }
 
   get modelListNames() {
-    console.log(this.model);
     return this.model.lists;
   }
 
@@ -13,15 +14,17 @@ class NavigationController {
     e.stopPropagation();
     switch (e.type) {
       case 'click':
-        this.clickHandler(e.target);
+        this.clickHandler(e);
         break;
       default:
         console.log(e.target);
     }
   }
 
-  clickHandler(target) {
-    const listName = target.getAttribute('data-list-name');
+  clickHandler(event) {
+    if (!event.target.classList.contains('navigation__link') && !event.target.classList.contains('navigation__sublink')) return;
+    const listName = event.target.getAttribute('data-list-name');
+    Route(event);
   }
 }
 

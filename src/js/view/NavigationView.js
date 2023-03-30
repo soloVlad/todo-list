@@ -17,7 +17,11 @@ class NavigationView {
 
     this.navigationAll.textContent = 'all';
     this.navigationToday.textContent = 'today';
+    this.navigationAll.setAttribute('data-list-name', 'all');
+    this.navigationToday.setAttribute('data-list-name', 'today');
 
+    this.navigationAll.href = '/';
+    this.navigationToday.href = '/today';
     this.navigationLists.setAttribute('aria-label', 'Lists');
 
     this.navigation.appendChild(this.navigationAll);
@@ -26,6 +30,7 @@ class NavigationView {
     parent.appendChild(this.navigation);
 
     Events.on('list added', this.render.bind(this));
+    this.navigation.addEventListener('click', this.controller);
   }
 
   createListLink(listName) {
@@ -34,8 +39,10 @@ class NavigationView {
 
     a.classList.add('navigation__sublink');
 
-    a.href = '#';
+    const listNameWithoutSpaces = listName.replaceAll(' ', '-').toLowerCase();
+    a.href = `/${listNameWithoutSpaces}`;
     a.textContent = listName;
+    a.setAttribute('data-list-name', listNameWithoutSpaces);
 
     li.appendChild(a);
 

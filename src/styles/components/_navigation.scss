@@ -16,6 +16,8 @@
   border-radius: 1.8rem;
   display: block;
   font-weight: 700;
+  text-decoration: none;
+  color: inherit;
 
   &:hover {
     background-color: $color-light-shadow;
