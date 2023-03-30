@@ -11,7 +11,9 @@ class ListView {
 
     this.list = document.createElement('ul');
     this.list.classList.add('todo-list');
-    this.controller.modelList.forEach((task) => this.createTask(task));
+    if (this.controller.modelList.length) {
+      this.controller.modelList.forEach((task) => this.createTask(task));
+    }
 
     this.listContainer.appendChild(this.title);
     this.listContainer.appendChild(this.list);

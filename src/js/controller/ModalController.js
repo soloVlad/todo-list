@@ -1,5 +1,6 @@
 import FullList from '../FullList';
 import Events from '../Events';
+import { handleLocation } from '../Router';
 
 class ModalController {
   // EventListener interface
@@ -35,6 +36,7 @@ class ModalController {
     const listName = document.querySelector('#list-name-input').value;
     FullList.addList(listName);
     Events.emit('close modal');
+    document.querySelector(`[data-list-name=${listName}]`).click();
   }
 }
 

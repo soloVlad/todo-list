@@ -52,9 +52,6 @@ const FullList = {
   },
 
   addList(listName) {
-    if (listName === '') {
-      return;
-    }
     this.list[listName] = this.list[listName] ?? [];
     Events.emit('list added');
   },

@@ -4,6 +4,7 @@ class ListModel {
   constructor(listName) {
     this.listName = listName;
     this.list = FullList.getByListName(this.listName);
+    console.log(this.list);
   }
 
   add(task) {

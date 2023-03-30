@@ -22,10 +22,6 @@ const navigationModel = new NavigationModel();
 const navigationController = new NavigationController(navigationModel);
 const navigationVew = new NavigationView(navigationController, main);
 
-const listModel = new ListModel('first');
-const listController = new ListController(listModel);
-const listView = new ListView(listController, main);
-
 const modalController = new ModalController();
 const modalView = new ModalView(modalController, document.body);
 

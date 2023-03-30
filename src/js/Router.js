@@ -1,6 +1,7 @@
 import ListModel from './model/ListModel';
 import ListController from './controller/ListController';
 import ListView from './view/ListView';
+import FullList from './FullList';
 
 const Route = (e) => {
   const event = e || window.event;
@@ -20,9 +21,11 @@ const handleLocation = () => {
     listContainer.parentElement.removeChild(listContainer);
   }
 
-  const listModel = new ListModel(path);
-  const listController = new ListController(listModel);
-  const listView = new ListView(listController, document.querySelector('main'));
+  if (FullList.getByListName(path)) {
+    const listModel = new ListModel(path);
+    const listController = new ListController(listModel);
+    const listView = new ListView(listController, document.querySelector('main'));
+  }
 };
 
 export { Route, handleLocation };
